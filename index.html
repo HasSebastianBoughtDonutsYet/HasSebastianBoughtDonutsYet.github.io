@@ -65,50 +65,11 @@
              padding-left: 10px;
          }
         </style>
-        <script>
-         /*
-          * Basic Count Up from Date and Time
-          * Author: @mrwigster / trulycode.com
-          */
-         window.onload=function() {
-             // Month,Day,Year,Hour,Minute,Second
-             upTime('sep,21,2017,12:24:00'); // ****** Change this line!
-         }
-         function upTime(countTo) {
-             now = new Date();
-             countTo = new Date(countTo);
-             difference = (now-countTo);
-
-             days=Math.floor(difference/(60*60*1000*24)*1);
-             hours=Math.floor((difference%(60*60*1000*24))/(60*60*1000)*1);
-             mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
-             secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
-
-             document.getElementById('days').firstChild.nodeValue = days;
-             document.getElementById('hours').firstChild.nodeValue = hours;
-             document.getElementById('minutes').firstChild.nodeValue = mins;
-             document.getElementById('seconds').firstChild.nodeValue = secs;
-
-             clearTimeout(upTime.to);
-             upTime.to=setTimeout(function(){ upTime(countTo); },1000);
-         }
-        </script>
     </head>
     <body>
         <div id="container">
             <main>
-                <h1>NO</h1>
-                <div id="countup">
-                    It's been
-                    <span id="days">00</span>
-                    <span class="timeRefDays">days</span>
-                    <span id="hours">00</span>
-                    <span class="timeRefHours">hours</span>
-                    <span id="minutes">00</span>
-                    <span class="timeRefMinutes">minutes</span>
-                    <span id="seconds">00</span>
-                    <span class="timeRefSeconds">seconds</span>
-                </div>
+                <h1>YES :)</h1>
             </main>
         </div>
     </body>
